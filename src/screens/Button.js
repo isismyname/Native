@@ -1,4 +1,4 @@
-import { HStack, Text, VStack } from 'native-base'
+import { Box, HStack, Text, VStack } from 'native-base'
 import React, { useState } from 'react'
 import { TouchableOpacity, View } from 'react-native'
 import { Feather } from '@expo/vector-icons'; 
@@ -21,6 +21,7 @@ export default function Button() {
     }
 
   return (
+    <Box safeArea bg='cyan.700'>
       <View>
           <HStack marginX={15} color="cyan.400" marginTop={10} >
               <Text style={{
@@ -33,49 +34,55 @@ export default function Button() {
                   backgroundColor:"black"}} color="cyan.800" fontFamily="body.700" > {count} {result} </Text>
           </HStack>
           <HStack marginX={15} justifyContent="space-between" color="cyan.400" marginTop={10} >
-              <TouchableOpacity onPress={() => clear()} style={{
+          <TouchableOpacity onPress={() => setCount([])} style={{
                   alignItems: "flex-end",
                   paddingHorizontal: 10,
-                //   width:"100%",
-                  paddingVertical: 7.5,
-                  textAlign:"center", 
-                  borderRadius:10 , 
-                  backgroundColor:"black"}} color="cyan.800"> <Feather name="delete" size={20} color="cyan" /> </TouchableOpacity>
-
-              <TouchableOpacity onPress={() => setCount([])} style={{
-                  alignItems: "flex-end",
-                  paddingHorizontal: 10,
-                //   width:"100%",
+                  marginRight: 5,
+                  width:"45%",
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
                   backgroundColor:"black"}} color="cyan.800">Clear</TouchableOpacity>
 
+              <TouchableOpacity onPress={() => clear()} style={{
+                  alignItems: "flex-end",
+                  paddingHorizontal: 10,
+                  marginLeft: 5,
+                  width:"45%",
+                  paddingVertical: 7.5,
+                  textAlign:"center", 
+                  borderRadius:10 , 
+                  backgroundColor:"black"}} color="cyan.800"> <Feather name="delete" size={20} color="cyan" /> </TouchableOpacity>
+
           </HStack>
           <HStack space={3} justifyContent="space-between" marginX={15} color="cyan.400" marginTop={10} >
               <TouchableOpacity onPress={() => setCount([...count, 1])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
                   backgroundColor:"black"}} color="cyan.800">1</TouchableOpacity>
 
               <TouchableOpacity onPress={() => setCount([...count, 2])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
                   backgroundColor:"black"}}>2</TouchableOpacity>
 
               <TouchableOpacity onPress={() => setCount([...count, '-'])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
                   backgroundColor:"black"}}>-</TouchableOpacity>
 
               <TouchableOpacity onPress={() => setCount([...count, '+'])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
@@ -84,28 +91,32 @@ export default function Button() {
           </HStack>
           <HStack space={3} justifyContent="space-between" marginX={15} color="cyan.400" marginTop={10} >
               <TouchableOpacity onPress={() => setCount([...count, 3])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
                   backgroundColor:"black"}}>3</TouchableOpacity>
 
               <TouchableOpacity onPress={() => setCount([...count, 4])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
                   backgroundColor:"black"}}>4</TouchableOpacity>
 
               <TouchableOpacity onPress={() => setCount([...count, '/'])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
                   backgroundColor:"black"}}>/</TouchableOpacity>
 
               <TouchableOpacity onPress={() => setCount([...count, '*'])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
@@ -114,28 +125,32 @@ export default function Button() {
           </HStack>
           <HStack space={3} justifyContent="space-between" marginX={15} color="cyan.400" marginTop={10} >
               <TouchableOpacity onPress={() => setCount([...count, 5])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
                   backgroundColor:"black"}}>5</TouchableOpacity>
 
               <TouchableOpacity onPress={() => setCount([...count, 6])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
                   backgroundColor:"black"}}>6</TouchableOpacity>
 
               <TouchableOpacity onPress={() => setCount([...count, '%'])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
                   backgroundColor:"black"}}>%</TouchableOpacity>
 
               <TouchableOpacity onPress={() => getResult()} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
@@ -144,28 +159,32 @@ export default function Button() {
           </HStack>
           <HStack space={3} justifyContent="space-between" marginX={15} color="cyan.400" marginTop={10} >
               <TouchableOpacity onPress={() => setCount([...count, 7])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
                   backgroundColor:"black"}}>7</TouchableOpacity>
 
               <TouchableOpacity onPress={() => setCount([...count, 8])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
                   backgroundColor:"black"}}>8</TouchableOpacity>
 
               <TouchableOpacity onPress={() => setCount([...count, 9])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
                   backgroundColor:"black"}}>9</TouchableOpacity>
 
               <TouchableOpacity onPress={() => setCount([...count, 0])} style={{
-                  width:60,
+                  width:70,
+                  height: 40,
                   paddingVertical: 7.5,
                   textAlign:"center", 
                   borderRadius:10 , 
@@ -175,5 +194,6 @@ export default function Button() {
           <HStack marginX={15} color="cyan.400" marginTop={10} >
           </HStack>
       </View>
+    </Box>
   )
 }

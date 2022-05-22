@@ -88,6 +88,7 @@ export default function App() {
   // Configuration Native Base Custom Theme
   const theme = extendTheme({
     colors: customeColor,
+    opacity,
     fontConfig,
     fonts: {
       heading: "RobotoCondensed",
